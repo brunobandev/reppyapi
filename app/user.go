@@ -10,6 +10,7 @@ import (
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
+	"github.com/gorilla/context"
 	"golang.org/x/crypto/bcrypt"
 )
 
@@ -35,7 +36,8 @@ type JwtToken struct {
 }
 
 func (app *App) profile(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("Test")
+	token := context.Get(r, "decoded")
+	fmt.Println(token)
 }
 
 func (app *App) signup(w http.ResponseWriter, r *http.Request) {

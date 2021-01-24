@@ -1,12 +1,25 @@
 package app
 
-import "time"
+import (
+	"net/http"
+)
 
-type Bill struct {
-	ID int
-	Property
-	Description string
-	Price       float64
-	File        string
-	DueAt       time.Time
+func (app *App) createBill(w http.ResponseWriter, r *http.Request) {
+
+}
+
+func (app *App) getBill(w http.ResponseWriter, r *http.Request) {
+
+}
+
+func (app *App) updateBill(w http.ResponseWriter, r *http.Request) {
+
+}
+
+func (app *App) deleteBill(w http.ResponseWriter, r *http.Request) {
+
+}
+
+func (app *App) addUserToBill(w http.ResponseWriter, r *http.Request) {
+
 }

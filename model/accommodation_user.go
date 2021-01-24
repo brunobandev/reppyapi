@@ -1,8 +1,9 @@
-package app
+package model
 
+// AccommodationUser struct
 type AccommodationUser struct {
 	ID int
 	Accommodation
-	User
+	// User
 	Active bool
 }

@@ -23,6 +23,8 @@ func (app *App) SetupRouter() {
 	app.Router.Methods("POST").Path("/join").HandlerFunc(app.signup)
 	app.Router.Methods("POST").Path("/login").HandlerFunc(app.signin)
 	app.Router.Methods("GET").Path("/profile").HandlerFunc(app.middleware(app.profile))
+
+	app.Router.Methods("POST").Path("/property").HandlerFunc(app.getProperty)
 }
 
 func (app *App) middleware(next http.HandlerFunc) http.HandlerFunc {
