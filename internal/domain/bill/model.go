@@ -1,11 +1,11 @@
-package model
+package bill
 
 import "time"
 
 // Bill struct
 type Bill struct {
-	ID int
-	Property
+	ID          int
+	PropertyID  int
 	Description string
 	Price       float64
 	File        string
